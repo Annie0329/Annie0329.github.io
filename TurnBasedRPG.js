@@ -913,7 +913,7 @@ ApplicationMain.main = function() {
 ApplicationMain.create = function(config) {
 	var app = new openfl_display_Application();
 	ManifestResources.init(config);
-	app.meta.h["build"] = "33";
+	app.meta.h["build"] = "36";
 	app.meta.h["company"] = "HaxeFlixel";
 	app.meta.h["file"] = "TurnBasedRPG";
 	app.meta.h["name"] = "TurnBasedRPG";
@@ -7464,12 +7464,80 @@ var Player = function(x,y) {
 	}
 	flixel_FlxSprite.call(this,x,y);
 	this.makeGraphic(16,16,-16776961);
+	this.drag.set_x(this.drag.set_y(1600));
 };
 $hxClasses["Player"] = Player;
 Player.__name__ = "Player";
 Player.__super__ = flixel_FlxSprite;
 Player.prototype = $extend(flixel_FlxSprite.prototype,{
-	__class__: Player
+	updateMovement: function() {
+		var up = false;
+		var down = false;
+		var left = false;
+		var right = false;
+		up = flixel_FlxG.keys.checkKeyArrayState([38,87],1);
+		down = flixel_FlxG.keys.checkKeyArrayState([40,83],1);
+		left = flixel_FlxG.keys.checkKeyArrayState([37,65],1);
+		right = flixel_FlxG.keys.checkKeyArrayState([39,68],1);
+		if(up && down) {
+			down = false;
+			up = down;
+		}
+		if(left && right) {
+			right = false;
+			left = right;
+		}
+		if(up || down || left || right) {
+			var newAngle = 0;
+			if(up) {
+				newAngle = -90;
+				if(left) {
+					newAngle -= 45;
+				} else if(right) {
+					newAngle += 45;
+				}
+			} else if(down) {
+				newAngle = 90;
+				if(left) {
+					newAngle += 45;
+				} else if(right) {
+					newAngle -= 45;
+				}
+			} else if(left) {
+				newAngle = 180;
+			} else if(right) {
+				newAngle = 0;
+			}
+			this.velocity.set(200,0);
+			var tmp = this.velocity;
+			var X = 0;
+			var Y = 0;
+			if(Y == null) {
+				Y = 0;
+			}
+			if(X == null) {
+				X = 0;
+			}
+			var X1 = X;
+			var Y1 = Y;
+			if(Y1 == null) {
+				Y1 = 0;
+			}
+			if(X1 == null) {
+				X1 = 0;
+			}
+			var point = flixel_math_FlxPoint._pool.get().set(X1,Y1);
+			point._inPool = false;
+			var point1 = point;
+			point1._weak = true;
+			tmp.rotate(point1,newAngle);
+		}
+	}
+	,update: function(elapsed) {
+		this.updateMovement();
+		flixel_FlxSprite.prototype.update.call(this,elapsed);
+	}
+	,__class__: Player
 });
 var Reflect = function() { };
 $hxClasses["Reflect"] = Reflect;
@@ -69610,7 +69678,7 @@ var lime_utils_AssetCache = function() {
 	this.audio = new haxe_ds_StringMap();
 	this.font = new haxe_ds_StringMap();
 	this.image = new haxe_ds_StringMap();
-	this.version = 7102;
+	this.version = 532473;
 };
 $hxClasses["lime.utils.AssetCache"] = lime_utils_AssetCache;
 lime_utils_AssetCache.__name__ = "lime.utils.AssetCache";
@@ -116394,6 +116462,7 @@ flixel_FlxObject._secondSeparateFlxRect = (function($this) {
 	$r = rect;
 	return $r;
 }(this));
+Player.SPEED = 200;
 Xml.Element = 0;
 Xml.PCData = 1;
 Xml.CData = 2;
