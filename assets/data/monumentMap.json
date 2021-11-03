@@ -74,7 +74,10 @@
         {"name": "banana", "id": 56, "_eid": "75219327", "x": 1320, "y": 1520, "originX": 0, "originY": 0},
         {"name": "banana", "id": 57, "_eid": "75219327", "x": 1480, "y": 1520, "originX": 0, "originY": 0},
         {"name": "banana", "id": 58, "_eid": "75219327", "x": 1240, "y": 1400, "originX": 0, "originY": 0},
-        {"name": "banana", "id": 59, "_eid": "75219327", "x": 1640, "y": 1520, "originX": 0, "originY": 0}
+        {"name": "banana", "id": 59, "_eid": "75219327", "x": 1640, "y": 1520, "originX": 0, "originY": 0},
+        {"name": "saveStone", "id": 60, "_eid": "31527380", "x": 1840, "y": 1200, "originX": 0, "originY": 0},
+        {"name": "shibaCoin", "id": 61, "_eid": "86208261", "x": 2320, "y": 1200, "originX": 0, "originY": 0},
+        {"name": "shibaCoin", "id": 62, "_eid": "86208261", "x": 2640, "y": 1360, "originX": 0, "originY": 0}
       ]
     },
     {
