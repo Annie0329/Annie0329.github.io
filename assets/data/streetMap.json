@@ -44,7 +44,8 @@
         {"name": "p2", "id": 26, "_eid": "14187210", "x": 1960, "y": 1760, "originX": 0, "originY": 0},
         {"name": "p3", "id": 27, "_eid": "14188459", "x": 2960, "y": 1760, "originX": 0, "originY": 0},
         {"name": "saveStone", "id": 28, "_eid": "31527380", "x": 1560, "y": 2000, "originX": 0, "originY": 0},
-        {"name": "p1Mach", "id": 29, "_eid": "48206217", "x": 800, "y": 1840, "originX": 0, "originY": 0}
+        {"name": "p1Mach", "id": 29, "_eid": "48206217", "x": 800, "y": 1840, "originX": 0, "originY": 0},
+        {"name": "p2Mach", "id": 30, "_eid": "54650494", "x": 1720, "y": 1880, "originX": 0, "originY": 0}
       ]
     },
     {
