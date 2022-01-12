@@ -51,7 +51,7 @@
         {"name": "saveStone", "id": 40, "_eid": "31527380", "x": 2880, "y": 1960, "originX": 0, "originY": 0},
         {"name": "saveStone", "id": 41, "_eid": "31527380", "x": 1600, "y": 920, "originX": 0, "originY": 0},
         {"name": "rod", "id": 42, "_eid": "57384346", "x": 1800, "y": 920, "originX": 0, "originY": 0},
-        {"name": "shop", "id": 43, "_eid": "26908707", "x": 1760, "y": 680, "originX": 0, "originY": 0},
+        {"name": "shop", "id": 43, "_eid": "26908707", "x": 1760, "y": 560, "originX": 0, "originY": 0},
         {"name": "house1", "id": 44, "_eid": "80329818", "x": 3080, "y": 680, "originX": 0, "originY": 0},
         {"name": "house3", "id": 45, "_eid": "13332391", "x": 2200, "y": 680, "originX": 0, "originY": 0},
         {"name": "house2", "id": 46, "_eid": "13333697", "x": 1320, "y": 680, "originX": 0, "originY": 0},
