@@ -63,7 +63,9 @@
         {"name": "house2Sign", "id": 52, "_eid": "78430078", "x": 1120, "y": 680, "originX": 0, "originY": 0},
         {"name": "house3Sign", "id": 53, "_eid": "78430563", "x": 2400, "y": 680, "originX": 0, "originY": 0},
         {"name": "sea", "id": 54, "_eid": "88252965", "x": 3720, "y": 520, "originX": 0, "originY": 0},
-        {"name": "sea", "id": 55, "_eid": "88252965", "x": 3720, "y": 1800, "originX": 0, "originY": 0}
+        {"name": "sea", "id": 55, "_eid": "88252965", "x": 3720, "y": 1800, "originX": 0, "originY": 0},
+        {"name": "p3Mach", "id": 56, "_eid": "75589805", "x": 2080, "y": 1680, "originX": 0, "originY": 0},
+        {"name": "house4Sign", "id": 57, "_eid": "71478503", "x": 240, "y": 680, "originX": 0, "originY": 0}
       ]
     },
     {
